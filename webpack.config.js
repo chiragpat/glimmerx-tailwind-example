@@ -8,6 +8,10 @@ module.exports = {
   entry: {
     app: './src/index.js'
   },
+  devtool: false,
+  devServer: {
+    writeToDisk: true,
+  },
   module: {
     rules: [
       {
@@ -20,6 +24,14 @@ module.exports = {
             },
           },
           '@glimmerx/webpack-loader',
+        ],
+      },
+      {
+        test: /\.css$/i,
+        use: [
+          { loader: 'style-loader', options: { injectType: 'linkTag' } },
+          { loader: 'file-loader' },
+          'postcss-loader'
         ],
       },
     ],

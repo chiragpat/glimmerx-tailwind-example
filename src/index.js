@@ -1,3 +1,4 @@
+import './styles.css';
 import { renderComponent } from '@glimmerx/core';
 import Counter from './components/Counter';
 

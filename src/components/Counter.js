@@ -9,8 +9,10 @@ export default class HelloWorld extends Component {
   }
 
   static template = hbs`
-    <p>You have clicked the button {{this.count}} times.</p>
+    <section class="container mx-auto">
+      <p class="flex">You have clicked the button {{this.count}} times.</p>
 
-    <button {{on "click" this.increment}}>Click</button>
+      <button {{on "click" this.increment}}>Click</button>
+    </section>
   `;
 }
